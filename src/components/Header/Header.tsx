@@ -10,7 +10,7 @@ import { Theme } from "@material-ui/core/styles";
 import FormatListNumberedIcon from "@material-ui/icons/FormatListNumbered";
 import HomeIcon from "@material-ui/icons/Home";
 import MenuIcon from "@material-ui/icons/Menu";
-import { makeStyles } from "@material-ui/styles";
+import { useStyles } from "./HeaderStyles";
 
 export const Header = () => {
   const classes = useStyles();
@@ -25,7 +25,6 @@ export const Header = () => {
         <IconButton
           color="inherit"
           aria-label="open drawer"
-          onClick={handleDrawerToggle}
           className={classes.navIconHide}
         >
           <MenuIcon />

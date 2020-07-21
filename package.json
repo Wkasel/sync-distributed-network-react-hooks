@@ -1,7 +1,12 @@
 {
-  "name": "create-react-app-with-typescript",
-  "version": "4.0.0",
+  "name": "sync-app-poc",
+  "version": "0.0.1",
   "private": true,
+  "author": {
+    "email": "wkasel@gmail.com",
+    "name": "William Kasel",
+    "url": "https://www.williamkasel.com"
+  },
   "dependencies": {
     "@material-ui/core": "^4.11.0",
     "@material-ui/icons": "^4.9.1",
@@ -12,10 +17,12 @@
     "react-dom": "latest",
     "react-router-dom": "^5.2.0",
     "react-scripts": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "use-position": "^0.0.7"
   },
   "scripts": {
     "start": "react-scripts start",
+    "start:https":"HTTPS=true react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

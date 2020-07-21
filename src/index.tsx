@@ -4,22 +4,19 @@ import ReactDOM from "react-dom";
 import { createBrowserHistory } from "history";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from "@material-ui/core/styles";
-import { AppComponent } from "./App";
-import { HomePage, CreditsPage } from "./pages";
-import theme from "./theme";
+import { HomePage, CreditsPage, DemoPage } from "./pages";
+import theme from "./styles/theme";
 
 const history = createBrowserHistory();
 
 ReactDOM.render(
   <ThemeProvider theme={theme}>
     <CssBaseline />
-    <AppComponent>
-      <Router history={history}>
-        <Route exact={true} path="/" component={HomePage} />
-        <Route exact={true} path="/home" component={HomePage} />
-        <Route exact={true} path="/todo" component={CreditsPage} />
-      </Router>
-    </AppComponent>
+    <Router history={history}>
+      <Route exact={true} path="/" component={HomePage} />
+      <Route exact={true} path="/demo" component={DemoPage} />
+      <Route exact={true} path="/todo" component={CreditsPage} />
+    </Router>
   </ThemeProvider>,
   document.querySelector("#root")
 );

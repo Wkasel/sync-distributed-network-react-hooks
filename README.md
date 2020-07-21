@@ -1,25 +1,17 @@
-# Create React App example with TypeScript
+# Sync App
 
-## How to use
+> WIP: Sync UserState across every live browser session
 
-Download the example [or clone the repo](https://github.com/mui-org/material-ui):
+## Setup
 
-```sh
-curl https://codeload.github.com/mui-org/material-ui/tar.gz/master | tar -xz --strip=2 material-ui-master/examples/create-react-app-with-typescript
-cd create-react-app-with-typescript
-```
+_HTTPS_
 
-Install it and run:
+> A really simple solution is [mkcert](https://github.com/FiloSottile/mkcert)
 
-```sh
-npm install
-npm start
-```
+1. `brew install mkcert`
+2. `mkcert -install`
+3. `mkcert localhost` -> The certificate is at "./localhost.pem" and the key at "./localhost-key.pem" ✅
 
-or:
+- QuickStart: `(yarn | npm run) start:https`
 
-[![Edit on CodeSandbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/github/mui-org/material-ui/tree/master/examples/create-react-app-with-typescript)
-
-## The idea behind the example
-
-This example demonstrates how you can use [Create React App](https://github.com/facebookincubator/create-react-app) with [TypeScript](https://github.com/Microsoft/TypeScript).
+- Custom SSL Cert: `HTTPS=true SSL_CRT_FILE=./localhost.pem SSL_KEY_FILE=./localhost-key.pem npm start`
